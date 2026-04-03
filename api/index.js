@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const serverless = require('serverless-http'); // install via npm i serverless-http
 const app = express();
@@ -9,3 +10,8 @@ app.get('/', (req, res) => {
 
 // Export as serverless function
 module.exports = serverless(app);
+=======
+const app = require("../server");
+
+module.exports = app;
+>>>>>>> 4d15e83 (Vercel-ready serverless Express setup)

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 {
   "routes": [
     { "src": "/(.*)", "dest": "/api" }
   ]
+=======
+{
+  "routes": [
+    { "src": "/(.*)", "dest": "/api" }
+  ]
+>>>>>>> 4d15e83 (Vercel-ready serverless Express setup)
 }
