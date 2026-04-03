@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 {
+  "version": 2,
+  "builds": [
+    { "src": "api/index.js", "use": "@vercel/node" }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/api" }
+    { "src": "/(.*)", "dest": "api/index.js" }
   ]
-=======
-{
-  "routes": [
-    { "src": "/(.*)", "dest": "/api" }
-  ]
->>>>>>> 4d15e83 (Vercel-ready serverless Express setup)
 }

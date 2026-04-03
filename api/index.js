@@ -1,17 +1,18 @@
-<<<<<<< HEAD
-const express = require('express');
-const serverless = require('serverless-http'); // install via npm i serverless-http
+const express = require("express");
+const serverless = require("serverless-http");
 const app = express();
 
-// Define your routes
-app.get('/', (req, res) => {
-  res.send('Hello from Vercel Express!');
+app.use(express.json());
+
+// Example route
+app.get("/", (req, res) => {
+  res.send("Hello from Express on Vercel!");
 });
 
-// Export as serverless function
-module.exports = serverless(app);
-=======
-const app = require("../server");
+// Import your routes
+const entryRoutes = require("../routes/entryRoutes");
+app.use("/api/entries", entryRoutes);
 
+// Export the app as a serverless function
 module.exports = app;
->>>>>>> 4d15e83 (Vercel-ready serverless Express setup)
+module.exports.handler = serverless(app);
