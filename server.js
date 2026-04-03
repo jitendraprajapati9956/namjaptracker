@@ -20,7 +20,6 @@ mongoose.connect(process.env.MONGODB_URI)
 app.use("/api/entry", entryRoutes);
 
 // start server
-=======
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -40,9 +39,3 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // routes
 app.use("/api/entry", entryRoutes);
-
-// start server
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
->>>>>>> 4d15e83 (Vercel-ready serverless Express setup)
