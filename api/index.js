@@ -5,13 +5,13 @@ const app = express();
 
 app.use(express.json());
 
-// routes import karo
+// routes
 const entryRoutes = require("../routes/entryRoutes");
 app.use("/api/entries", entryRoutes);
 
 // test route
 app.get("/", (req, res) => {
-  res.send("✅ Namjap Tracker API is working!");
+  res.send("✅ API is working");
 });
 
 // ✅ ONLY THIS EXPORT
