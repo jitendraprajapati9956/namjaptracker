@@ -6,17 +6,17 @@ exports.createEntry = async (req, res) => {
 
     const now = new Date();
 
-    // ✅ Full Date
-    const fullDate = now.toISOString().split("T")[0]; // YYYY-MM-DD
+   
+    const fullDate = now.toISOString().split("T")[0]; 
 
-    // ✅ Day number (1–7)
+    
     let dayNumber = now.getDay();
     dayNumber = dayNumber === 0 ? 7 : dayNumber;
 
     const sum = Number(today) + Number(total);
 
     const entry = new Entry({
-      date: fullDate,   // ✅ store full date
+      date: fullDate,   
       day: dayNumber,
       today,
       total,
