@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Entry = require("../models/Entry");
 
 exports.createEntry = async (req, res) => {
@@ -69,7 +68,7 @@ exports.updateEntry = async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-=======
+
 const Entry = require("../models/Entry");
 
 exports.createEntry = async (req, res) => {
@@ -140,5 +139,5 @@ exports.updateEntry = async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
->>>>>>> 4d15e83 (Vercel-ready serverless Express setup)
+}
 };

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import axios from "axios";
 import {
@@ -83,7 +82,6 @@ function EntryForm() {
   );
 }
 
-=======
 import React, { useState } from "react";
 import axios from "axios";
 import {
@@ -168,5 +166,4 @@ function EntryForm() {
   );
 }
 
->>>>>>> 4d15e83 (Vercel-ready serverless Express setup)
 export default EntryForm;
