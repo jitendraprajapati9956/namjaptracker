@@ -8,7 +8,6 @@ const {
   updateEntry
 } = require("../controllers/entryController");
 
-// ✅ Routes
 router.get("/all", getEntries);
 router.post("/add", createEntry);
 router.delete("/:id", deleteEntry);
