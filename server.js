@@ -17,7 +17,9 @@ mongoose.connect("mongodb://127.0.0.1:27017/testDB")
 
 // routes
 app.use("/api/entry", entryRoutes);
-
+app.get("/", (req, res) => {
+  res.send("NamJap Tracker API is running 🚀");
+});
 // start server
 app.listen(5000, () => {
   console.log("Server running on port 5000");
