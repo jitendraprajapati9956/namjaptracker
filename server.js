@@ -10,17 +10,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connect
-mongoose.connect("mongodb://127.0.0.1:27017/testDB")
+// ✅ MongoDB (FIXED)
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
 // routes
 app.use("/api/entry", entryRoutes);
+
+// ✅ root route
 app.get("/", (req, res) => {
   res.send("NamJap Tracker API is running 🚀");
 });
-// start server
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+
+// ❌ REMOVE THIS (IMPORTANT)
+// app.listen(5000, () => {
+//   console.log("Server running on port 5000");
+// });
+
+module.exports = app; // ✅ IMPORTANT
