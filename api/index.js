@@ -7,12 +7,11 @@ app.use(express.json());
 
 // Example route
 app.get("/", (req, res) => {
-  res.send("Hello from Express on Vercel!");
+  res.send("✅ Namjap Tracker API is working!");
 });
 
 // Your existing routes
 const entryRoutes = require("../routes/entryRoutes");
 app.use("/api/entries", entryRoutes);
-
-module.exports = app;
 module.exports.handler = serverless(app);
+module.exports = app;
